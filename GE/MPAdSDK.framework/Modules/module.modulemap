@@ -1,0 +1,6 @@
+framework module MPAdSDK {
+  umbrella header "MPAdSDK.h"
+  export *
+
+  module * { export * }
+}

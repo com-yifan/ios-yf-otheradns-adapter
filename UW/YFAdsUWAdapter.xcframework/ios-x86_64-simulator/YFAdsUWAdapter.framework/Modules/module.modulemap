@@ -1,0 +1,6 @@
+framework module YFAdsUWAdapter {
+  umbrella header "YFAdsUWAdapter.h"
+  export *
+
+  module * { export * }
+}
