@@ -1,0 +1,6 @@
+framework module YFAdsKYAdapter {
+  umbrella header "YFAdsKYAdapter.h"
+  export *
+
+  module * { export * }
+}
