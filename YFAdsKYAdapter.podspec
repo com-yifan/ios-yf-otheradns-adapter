@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name             = "YFAdKYAdapter"
+  s.name             = "YFAdsKYAdapter"
   s.version      = "6.1.2.0"
   s.summary          = "YF KY adapter"
   s.description      = <<-DESC
