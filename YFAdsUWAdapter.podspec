@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "YFAdsUWAdapter"
-  s.version      = "6.1.2.0"
+  s.version      = "6.1.2.1"
   s.summary          = "YF UW adapter"
   s.description      = <<-DESC
     YF UW adapter xcframework.

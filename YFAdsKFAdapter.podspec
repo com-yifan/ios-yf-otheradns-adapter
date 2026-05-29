@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "YFAdsKFAdapter"
-  s.version      = "6.1.2.0.1"
+  s.version      = "6.1.2.1"
   s.summary          = "YF KF adapter"
   s.description      = <<-DESC
     YF GE adapter xcframework.

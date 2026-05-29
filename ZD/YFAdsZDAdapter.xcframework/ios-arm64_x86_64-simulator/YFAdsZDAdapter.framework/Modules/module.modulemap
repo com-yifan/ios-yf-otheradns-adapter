@@ -1,0 +1,6 @@
+framework module YFAdsZDAdapter {
+  umbrella header "YFAdsZDAdapter.h"
+  export *
+
+  module * { export * }
+}

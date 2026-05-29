@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YFAdProfSDK"
-  s.version      = "6.1.2.0"
+  s.version      = "6.1.2.1"
   s.summary      = "AdProfSDK Framework"
   s.description  = "AdProfSDK for iOS advertising profiling"
   s.homepage     = "https://github.com/com-yifan/ios-yf-otheradns-adapter"
