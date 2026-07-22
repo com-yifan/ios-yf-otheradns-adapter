@@ -8,17 +8,18 @@ VERSION="${1:-6.1.2.1}"
 REPO_URL="https://github.com/com-yifan/ios-yf-otheradns-adapter.git"
 
 PODS=(
-#"YFAdProfSDK.podspec"
-#"YFMPAdSDK.podspec"
-#"YFAdsGEAdapter.podspec"
-#"YFAdsINAdapter.podspec"
-#"YFAdsJCAdapter.podspec"
-#"YFAdsNALAdapter.podspec"
-#"YFAdsUWAdapter.podspec"
-#"YFAdsXUAdapter.podspec"
+"YFAdProfSDK.podspec"
+"YFMPAdSDK.podspec"
+"YFAdsGEAdapter.podspec"
+"YFAdsINAdapter.podspec"
+"YFAdsJCAdapter.podspec"
+"YFAdsNALAdapter.podspec"
+"YFAdsUWAdapter.podspec"
+"YFAdsXUAdapter.podspec"
 "YFAdsKFAdapter.podspec"
 "YFAdsKYAdapter.podspec"
 "YFAdsZDAdapter.podspec"
+"YFAdsIEAdapter.podspec"
 )
 
 POD_NAMES=(
