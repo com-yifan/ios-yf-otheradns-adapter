@@ -10,7 +10,7 @@ Pod::Spec.new do |spec|
   spec.homepage = 'https://example.com'
   spec.license = { :type => 'Proprietary', :text => 'Copyright. All rights reserved.' }
   spec.author = { 'Author' => 'example@example.com' }
-  spec.source = { :path => '.' }
+  spec.source = { :git => "https://github.com/com-yifan/ios-yf-otheradns-adapter.git", :tag => spec.version.to_s }
 
   spec.platform = :ios, '12.0'
   spec.ios.deployment_target = '12.0'

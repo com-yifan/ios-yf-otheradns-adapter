@@ -10,6 +10,7 @@ REPO_URL="https://github.com/com-yifan/ios-yf-otheradns-adapter.git"
 PODS=(
 "YFAdProfSDK.podspec"
 "YFMPAdSDK.podspec"
+"YFCQAdSDK.podspec"
 "YFAdsGEAdapter.podspec"
 "YFAdsINAdapter.podspec"
 "YFAdsJCAdapter.podspec"
@@ -40,9 +41,9 @@ update_spec_version() {
 }
 
 for spec in "${PODS[@]}"; do
+  update_spec_version "$spec"
   pod trunk push "$spec" --allow-warnings --allow-warnings --skip-tests --verbose --skip-import-validation --synchronous
  done
 
-Published pod names:
+echo "Published pod names:"
 printf ' - %s\n' "${POD_NAMES[@]}"
-EOF
