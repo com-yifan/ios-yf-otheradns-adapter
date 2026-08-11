@@ -1,0 +1,24 @@
+//
+//  MPAdSlot.h
+//  MPAdSDK
+//
+//  Created by yongjiu on 2025/9/4.
+//
+
+#import <Foundation/Foundation.h>
+#import <MPAdSDK/MPRewardedVideoModel.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+
+@interface MPAdSlot : NSObject
+/// 广告位ID
+@property(nonatomic,copy)NSString *slotId;
+/// 是否是自渲染，只有信息流位置支持
+@property(nonatomic,assign)BOOL isSelfRender;
+/// 激励视频时传递的rewarded video model. 可传空
+@property(nullable,nonatomic,strong)MPRewardedVideoModel *rewardedVideoModel;
+
+@end
+
+NS_ASSUME_NONNULL_END

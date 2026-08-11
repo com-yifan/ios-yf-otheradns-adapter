@@ -8,12 +8,14 @@
 #import <Foundation/Foundation.h>
 #import "MPNativeExpressAd.h"
 #import <MPAdSDK/MPBidReason.h>
+#import <MPAdSDK/MPAdSlot.h>
+
+
 @class MPNativeExpressAdManager;
 
 NS_ASSUME_NONNULL_BEGIN
 
 typedef enum : NSUInteger {
-    MPNativeExpressAdTypeDraw,  // draw视频信息流
     MPNativeExpressAdTypeSelfRender, // 自渲染
     MPNativeExpressAdTypeFeed,  // 普通模板信息流
     MPNativeExpressAdTypeSelfRenderSplash // 自渲染开屏
@@ -82,6 +84,8 @@ typedef enum : NSUInteger {
 /// 广告底价，单位分，不会返回低于此底价的广告，底价过高可能会没有广告，兜底返回错误提示：广告价格低于底价！
 @property(nonatomic,assign)NSInteger basePrice;
 
+/// 广告请求ID,不要在loadAd后立即去取。
+@property(nonatomic,copy)NSString *adRequestID;
 
 /// 禁止使用此方法来初始化
 + (instancetype)new NS_UNAVAILABLE;
@@ -92,7 +96,7 @@ typedef enum : NSUInteger {
 /// 初始化方法
 /// @param placementId 广告id
 /// @param type 广告type
-/// @param adSize 广告尺寸,MPNativeExpressAdTypeFeed 类型根据宽度自适应，可将高度直接设置为0 MPNativeExpressAdTypeDraw类型传入屏幕的宽高
+/// @param adSize 广告尺寸,MPNativeExpressAdTypeFeed 类型根据宽度自适应，可将高度直接设置为0
 - (instancetype)initWithPlacementId:(nonnull NSString *)placementId type:(MPNativeExpressAdType)type adSize:(CGSize)adSize NS_DESIGNATED_INITIALIZER;
 
 /// 加载广告
@@ -105,6 +109,19 @@ typedef enum : NSUInteger {
 /// 通知广告平台的广告竞败
 /// @param bidLossReason 竞败原因
 - (void)notifyBidLoss:(MPBidReason *)bidLossReason;
+
+#pragma mark - service bid -
+/// 初始化
+/// MPAdSlot 广告id
+- (instancetype)initWithSlot:(MPAdSlot *)slot type:(MPNativeExpressAdType)type adSize:(CGSize)adSize NS_DESIGNATED_INITIALIZER;
+
+/// 获取bidging token
+/// 通过initWithSlot方法构造后，获取biddingToken 并请求adx 获取adm
+- (nullable NSString *)biddingToken;
+
+///  获取到adm数据后调用，Adm赋值调⽤后⽆需调⽤load⽅法，直接在相关回调⾥等候响应即可
+- (void)setMopubAdMarkUp:(NSString *)adm;
+
 
 @end
 

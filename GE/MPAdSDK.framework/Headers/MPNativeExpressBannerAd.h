@@ -9,6 +9,8 @@
 #import <MPAdSDK/MPSourceAdType.h>
 #import <MPAdSDK/MPBidReason.h>
 #import <MPAdSDK/MPAdMaterial.h>
+#import <MPAdSDK/MPAdSlot.h>
+
 @class MPNativeExpressBannerAd;
 
 NS_ASSUME_NONNULL_BEGIN
@@ -70,6 +72,10 @@ NS_ASSUME_NONNULL_BEGIN
 /// 广告底价，单位分，不会返回低于此底价的广告，底价过高可能会没有广告，兜底返回错误提示：广告价格低于底价！
 @property(nonatomic,assign)NSInteger basePrice;
 
+/// 广告请求ID,不要在loadAd后立即去取。
+@property(nonatomic,copy)NSString *adRequestID;
+
+
 /// 禁止使用此方法来初始化
 + (instancetype)new NS_UNAVAILABLE;
 
@@ -94,6 +100,20 @@ NS_ASSUME_NONNULL_BEGIN
 /// 通知广告平台的广告竞败
 /// @param bidLossReason 竞败原因
 - (void)notifyBidLoss:(MPBidReason *)bidLossReason;
+
+
+/// 下面的接口仅用于服务器bidding的初始化
+#pragma mark - service bid -
+/// 初始化
+/// MPAdSlot 广告id
+- (instancetype)initWithSlot:(MPAdSlot *)slot size:(CGSize)size NS_DESIGNATED_INITIALIZER;
+
+/// 获取bidging token
+/// 通过initWithSlot方法构造后，获取biddingToken 并请求adx 获取adm
+- (nullable NSString *)biddingToken;
+
+///  获取到adm数据后调用，Adm赋值调⽤后⽆需调⽤load⽅法，直接在相关回调⾥等候响应即可
+- (void)setMopubAdMarkUp:(NSString *)adm;
 
 @end
 
