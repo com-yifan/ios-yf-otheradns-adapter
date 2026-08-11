@@ -1,0 +1,6 @@
+framework module YFAdsNCAdapter {
+  umbrella header "YFAdsNCAdapter.h"
+  export *
+
+  module * { export * }
+}
