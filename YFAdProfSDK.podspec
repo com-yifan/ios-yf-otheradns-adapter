@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "YFAdProfSDK"
-  s.version      = "6.1.4.1"
+  s.version      = "2.1.6.7"
   s.summary      = "MPAdSDK third-party advertising SDK"
   s.description  = <<-DESC
     MPAdSDK including vendored framework and resource bundle.
