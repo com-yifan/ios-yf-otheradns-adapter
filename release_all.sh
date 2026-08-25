@@ -4,7 +4,7 @@ set -euo pipefail
 ROOT_DIR="$(cd "$(dirname "$0")" && pwd)"
 cd "$ROOT_DIR"
 
-VERSION="${1:-6.1.4.0}"
+VERSION="${1:-6.1.4.1}"
 REPO_URL="https://github.com/com-yifan/ios-yf-otheradns-adapter.git"
 
 PODS=(
@@ -13,15 +13,15 @@ PODS=(
 #"YFCQAdSDK.podspec"
 #"YFAdsGEAdapter.podspec"
 #"YFAdsINAdapter.podspec"
-#"YFAdsJCAdapter.podspec"
+"YFAdsJCAdapter.podspec"
 #"YFAdsNALAdapter.podspec"
 #"YFAdsUWAdapter.podspec"
 #"YFAdsXUAdapter.podspec"
-"YFAdsKFAdapter.podspec"
-"YFAdsKYAdapter.podspec"
-"YFAdsZDAdapter.podspec"
-"YFAdsIEAdapter.podspec"
-"YFAdsNCAdapter.podspec"
+#"YFAdsKFAdapter.podspec"
+#"YFAdsKYAdapter.podspec"
+#"YFAdsZDAdapter.podspec"
+#"YFAdsIEAdapter.podspec"
+#"YFAdsNCAdapter.podspec"
 )
 
 POD_NAMES=(
