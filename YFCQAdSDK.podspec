@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name = 'YFCQAdSDK'
-  spec.version = '6.1.4.0'
+  spec.version = '6.9.2.37'
   spec.summary = 'CQAdSDK iOS advertising mediation SDK.'
   spec.description = <<-DESC
     CQAdSDK provides iOS advertising mediation capabilities and wraps supported

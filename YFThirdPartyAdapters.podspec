@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'YFThirdPartyAdapters'
-  s.version          = '6.1.4.1'
+  s.version          = '6.1.4.2'
   s.summary          = 'YF third-party advertising network adapters'
   s.description      = <<-DESC
     A collection of YF third-party advertising network adapters. Install the
