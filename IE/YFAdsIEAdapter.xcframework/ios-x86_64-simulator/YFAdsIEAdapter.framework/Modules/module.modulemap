@@ -1,6 +1,0 @@
-framework module YFAdsIEAdapter {
-  umbrella header "YFAdsIEAdapter.h"
-  export *
-
-  module * { export * }
-}
